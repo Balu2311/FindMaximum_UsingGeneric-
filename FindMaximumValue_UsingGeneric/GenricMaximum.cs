@@ -6,12 +6,10 @@ namespace FindMaximumValue_UsingGeneric
 {
     public class GenricMaximum<T> where T : IComparable
     {
-        public T firstValue, secondValue, thirdValue;
-        public GenricMaximum(T firstValue, T secondValue, T thirdValue)
+        public T[] value;
+        public GenricMaximum(T[] value)
         {
-            this.firstValue = firstValue;
-            this.secondValue = secondValue;
-            this.thirdValue = thirdValue;
+            this.value = value;
         }
         public static T testMaximum(T firstValue, T secondValue, T thirdValue)
         {
@@ -33,7 +31,26 @@ namespace FindMaximumValue_UsingGeneric
             {
                 return thirdValue;
             }
-            return default;
+            throw new Exception("firstValue,secondValue,thirdValue are same");
+        }
+
+        // Sorts the specified values.
+        public T[] Sort(T[] values)
+        {
+            Array.Sort(values);
+            return values;
+        }
+        // Maximums the value.
+        public T MaxValue(T[] values)
+        {
+            var sorted_value = Sort(values);
+            return sorted_value[^1];
+        }
+        // Maximum method.
+        public T MaxMethod()
+        {
+            var Max = MaxValue(this.value);
+            return Max;
         }
     }
 }

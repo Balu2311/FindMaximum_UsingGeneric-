@@ -27,7 +27,6 @@ namespace FindMaximumValue_UsingGeneric
                 return thirdValue;
             }
             throw new Exception("firstValue,secondValue,thirdValue are same");
-
         }
     }
 }
