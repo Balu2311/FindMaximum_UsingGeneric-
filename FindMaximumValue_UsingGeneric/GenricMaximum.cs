@@ -52,5 +52,12 @@ namespace FindMaximumValue_UsingGeneric
             var Max = MaxValue(this.value);
             return Max;
         }
+
+        // Printing the max value.
+        public void PrintMAxValue()
+        {
+            var max = MaxValue(this.value);
+            Console.WriteLine("MAximum value is : " + max);
+        }
     }
 }
