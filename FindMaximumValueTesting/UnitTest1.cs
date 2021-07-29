@@ -53,5 +53,27 @@ namespace FindMaximumValueTesting
             double maxNumber = 55.5;
             Assert.AreEqual(maxNumber, result);
         }
+
+        // Given the maximum string first position.
+        public void GivenMaxString_FirstPosition()
+        {
+            string result = MaximumNumberCheck.MaximumString("Peach", "Apple", "Banana");
+            string maxString = "Peach";
+            Assert.AreEqual(maxString, result);
+        }
+        // Given the maximum string second position.
+        public void GivenMaxString_SecondPosition()
+        {
+            string result = MaximumNumberCheck.MaximumString("Apple", "Peach", "Banana");
+            string maxString = "Peach";
+            Assert.AreEqual(maxString, result);
+        }
+        // Given the maximum string third position.
+        public void GivenMaxString_ThirdPosition()
+        {
+            string result = MaximumNumberCheck.MaximumString("Apple", "Banana", "Peach");
+            string maxString = "Peach";
+            Assert.AreEqual(maxString, result);
+        }
     }
 }
